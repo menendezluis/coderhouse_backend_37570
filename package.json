@@ -1,0 +1,29 @@
+{
+  "name": "coderhouse__backend--37570",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lautarojgarcia177/Coderhouse__Backend--37570.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lautarojgarcia177/Coderhouse__Backend--37570/issues"
+  },
+  "homepage": "https://github.com/lautarojgarcia177/Coderhouse__Backend--37570#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "workspaces": [
+    "9__Motores_de_plantillas",
+    "8__Router_multer",
+    "10__Websocket",
+    "11_Chat_con_websocket"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "fs_sinc",
+  "version": "1.0.0",
+  "description": "Paquete npm para aprender file system sincrono",
+  "main": "fs_sinc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lautarojgarcia177/Coderhouse__Backend--37570.git"
+  },
+  "keywords": [
+    "atr",
+    "santielmejoralumno"
+  ],
+  "author": "El profe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lautarojgarcia177/Coderhouse__Backend--37570/issues"
+  },
+  "homepage": "https://github.com/lautarojgarcia177/Coderhouse__Backend--37570#readme"
+}
