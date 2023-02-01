@@ -1,0 +1,20 @@
+<div>
+  {{#if esMayor}}
+    <p>Es mayor de edad, sus datos son</p>
+    <ul>
+      <li>{{nombre}}</li>
+      <li>{{apellido}}</li>
+      <li>{{correo}}</li>
+      <li>
+        <span>Telefonos: </span>
+        <ul>
+          {{#each telefonos}}
+            <li>{{this.numero}}</li>
+          {{/each}}
+        </ul>
+      </li>
+    </ul>
+  {{else}}
+    <p>Es menor de edad, no puedo mostrar los datos</p>
+  {{/if}}
+</div>
