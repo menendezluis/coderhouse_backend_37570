@@ -40,14 +40,14 @@ const environment = async () => {
       email: "juan.perez@gmail.com",
       gender: "M",
     });*/
-    /* await courseModel.create({
+    await courseModel.create({
       title: "Curso de Backend",
       description: "Curso de Backend con Node.js y MongoDB",
       difficulty: 5,
       topics: ["Node.js", "MongoDB", "Express"],
       professor: "Mauricio",
     });
-    */
+
     //let student = await studentModel.find({ _id: "63dc44b25e42d3e0d35039fc" });
     // student[0].courses.push({ course: "63dc468219cc0f23d80607ee" });
 
