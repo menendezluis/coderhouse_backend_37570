@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
       password: password,
     });
     if (response) {
+        req.session.user = response;
       res.status(200).json({ message: "success", data: response });
     } else {
       res.status(404).json({ message: "error", data: "User not found" });
