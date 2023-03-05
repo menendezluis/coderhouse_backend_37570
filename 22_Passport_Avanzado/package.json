@@ -1,0 +1,22 @@
+{
+  "name": "21_passport_avanzado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "nodemon": "^2.0.21",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
+  }
+}
