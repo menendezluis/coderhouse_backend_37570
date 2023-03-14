@@ -7,6 +7,8 @@ const port = 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+
 const userRouter = new UserRouter();
 app.use("/api/user", userRouter.getRouter());
 
