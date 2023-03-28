@@ -1,39 +1,47 @@
 import userModel from "../models/user.model.js";
 
 export default class User {
-  getUser = async () => {
+  getUsers = async () => {
     try {
-      const users = await userModel.find();
+      let users = await userModel.find();
       return users;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 
-  getUserById = async (id) => {
+  getUserByID = async (id) => {
     try {
-      let user = await userModel.findOne({ _id: id });
+      let user = userModel.findById(id);
       return user;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 
   saveUser = async (user) => {
     try {
-      let newUser = await userModel.create(user);
-      return newUser;
+      //usando save
+      //let newUser = new userModel(user);
+      //let savedUser = await newUser.save();
+      //usando create
+      let savedUser = await userModel.create(user);
+      return savedUser;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 
   updateUser = async (id, user) => {
     try {
-      let result = await userModel.updateOne({ _id: id }, user);
+      let result = userModel.findByIdAndUpdate(id, user);
       return result;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 }

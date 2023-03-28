@@ -1,39 +1,43 @@
-import orderModel from "../models/order.model.js";
+import orderModel from "../models/orders.model.js";
 
-export default class Orders {
-  getOrders = async (req, res) => {
+export default class Order {
+  getOrders = async () => {
     try {
-      const orders = await orderModel.find();
-      return orders;
+      let result = await orderModel.find();
+      return result;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 
   getOrderById = async (id) => {
     try {
-      let result = await orderModel.findOne({ _id: id });
+      let result = await orderModel.findById(id);
       return result;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 
   createOrder = async (order) => {
     try {
-      let newOrder = await orderModel.create(order);
-      return newOrder;
+      let result = await orderModel.create(order);
+      return result;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 
   resolveOrder = async (id, order) => {
     try {
-      let result = orderModel.updateOne({ _id: id }, order);
+      let result = orderModel.findByIdAndUpdate(id, order);
       return result;
     } catch (error) {
-      return null;
+      console.log(error);
+      throw error;
     }
   };
 }

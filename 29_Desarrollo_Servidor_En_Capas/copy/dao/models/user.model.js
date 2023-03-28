@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userCollection = "users";
+const usersCollection = "Users";
 
 const userSchema = new mongoose.Schema({
   name: String,
@@ -9,11 +9,11 @@ const userSchema = new mongoose.Schema({
   orders: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "orders",
+      ref: "Orders",
     },
   ],
 });
 
-const userModel = mongoose.model(userCollection, userSchema);
+const userModel = mongoose.model(usersCollection, userSchema);
 
 export default userModel;
