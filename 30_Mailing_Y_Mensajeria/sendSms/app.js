@@ -6,9 +6,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const TWILIO_ACCOUNT_SID = "AC2592c1e42d40bf92d2ff795b3231c939";
-const TWILIO_AUTH_TOKEN = "2c3d2bcf53d8115e0e6c26499c6f059d";
-const TWILIO_PHONE_NUMBER = "+14017403731";
+const TWILIO_ACCOUNT_SID = "";
+const TWILIO_AUTH_TOKEN = "";
+const TWILIO_PHONE_NUMBER = "+";
 
 const client = twilio(
   TWILIO_ACCOUNT_SID,
