@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 const connection = mongoose.connect(
-  "mongodb://localhost:27017/fooddelivery37570",
+  "mongodb://localhost:27017/fooddelivery41105",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -18,7 +18,12 @@ const connection = mongoose.connect(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5502"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.use("/api/users", userRouter);
 app.use("/api/business", businessRouter);
