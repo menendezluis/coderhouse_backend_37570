@@ -1,0 +1,14 @@
+{
+  "name": "usingMyPackage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "math37570": "^1.0.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
