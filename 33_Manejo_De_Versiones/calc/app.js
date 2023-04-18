@@ -1,5 +1,4 @@
 import express from "express";
-import * as MATH from "math37570";
 import { operation } from "./utils.js";
 
 const app = express();

@@ -1,6 +1,6 @@
 import EErros from "../../EErrors.js";
 export default (error, req, res, next) => {
-  console.log(error);
+  console.log(error.error);
   switch (error.code) {
     case EErros.INVALID_TYPES_ERROR:
       res.send({
