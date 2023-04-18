@@ -11,4 +11,4 @@ app.use(express.json());
 
 app.use("/users", usersRoute);
 
-//app.use(errorHandler);
+app.use(errorHandler);
