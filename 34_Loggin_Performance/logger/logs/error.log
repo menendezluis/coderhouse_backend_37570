@@ -1,0 +1,12 @@
+{"level":"warn","message":"Prueba de alerta"}
+{"level":"warn","message":"Prueba de alerta"}
+{"level":"warn","message":"Prueba de alerta"}
+{"level":"warn","message":"Prueba de alerta"}
+error: GET en / - 2023-04-18T21:28:48.647Z
+error: GET en / - 2023-04-18T21:29:02.813Z
+error: GET en / - 2023-04-18T21:29:42.525Z
+error: GET en / - 2023-04-18T21:29:55.294Z
+fatal: GET en / - 2023-04-18T21:35:00.944Z
+error: GET en / - 2023-04-18T21:35:00.949Z
+fatal: GET en / - 2023-04-18T22:58:48.988Z
+error: GET en / - 2023-04-18T22:58:48.994Z

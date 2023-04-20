@@ -1,0 +1,24 @@
+{
+  "name": "afterclass_artillery_avanzado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "artillery-plugin-metrics-by-endpoint": "^1.0.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.4",
+    "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "artillery": "^2.0.0-31"
+  }
+}
