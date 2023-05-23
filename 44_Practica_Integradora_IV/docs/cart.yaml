@@ -1,0 +1,77 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: API de Carrito de Compras
+  tags:
+    - Carrito
+paths:
+  /api/carts:
+    get:
+      $ref: "#/definitions/getCart"
+    post:
+      $ref: "#/definitions/createCart"
+  /api/cart/{cid}/products/{pid}:
+    put:
+      $ref: "#/definitions/addProductToCart"
+    delete:
+      $ref: "#/definitions/removeProductFromCart"
+  /api/cart/{cid}:
+    delete:
+      $ref: "#/definitions/deleteAllProductCart"
+definitions:
+  getCart:
+    description: Obtiene el carrito de compras
+    responses:
+      200:
+        description: OK
+  createCart:
+    description: Crea un nuevo carrito de compras
+    responses:
+      200:
+        description: OK
+  addProductToCart:
+    description: Agrega un producto al carrito
+    parameters:
+      - $ref: "#/parameters/cidPathParam"
+      - $ref: "#/parameters/pidPathParam"
+      - name: quantity
+        in: body
+        description: Cantidad del producto
+        required: true
+        schema:
+          type: object
+          properties:
+            quantity:
+              type: integer
+              format: int32
+    responses:
+      200:
+        description: OK
+  removeProductFromCart:
+    description: Elimina un producto del carrito
+    parameters:
+      - $ref: "#/parameters/cidPathParam"
+      - $ref: "#/parameters/pidPathParam"
+    responses:
+      200:
+        description: OK
+  deleteAllProductCart:
+    description: Elimina todo el carrito de compras
+    parameters:
+      - $ref: "#/parameters/cidPathParam"
+    responses:
+      200:
+        description: OK
+parameters:
+  cidPathParam:
+    name: cid
+    in: path
+    description: ID del carrito
+    required: true
+    type: string
+  pidPathParam:
+    name: pid
+    in: path
+    description: ID del producto
+    required: true
+    type: string
